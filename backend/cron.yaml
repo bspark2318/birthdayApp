@@ -1,0 +1,11 @@
+cron: 
+- description: ping /api/health endpoint every hour 
+  url: /tasks/ping_health
+  schedule: every 60 mins
+  target: tasks
+
+- description: ping /api/notify_birtyhdays endpoint every monday 
+  url: /tasks/send_notifications
+  schedule: every monday 09:00
+  timezone: America/Chicago
+  target: tasks

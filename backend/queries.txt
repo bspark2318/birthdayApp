@@ -1,0 +1,4 @@
+curl   -H "X-Api-Key: abcdef123456" "http://127.0.0.1:8000/api/health"
+
+curl   -H "X-Api-Key: abcdef123456" "http://127.0.0.1:8000/api/notify_birthdays"
+

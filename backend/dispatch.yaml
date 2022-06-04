@@ -1,0 +1,13 @@
+dispatch:
+
+# - url: "birthday-app-352106.uc.r.appspot.com/"
+#   service: default 
+
+- url: "*/analytics*"
+  service: analytics 
+
+- url: "*/api*"
+  service: api 
+
+- url: "*/tasks*"
+  service: tasks 

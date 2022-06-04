@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4E9B7CA4-C92C-445A-A0FC-75F64F794874"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF3F60A7-3704-44CD-9A29-031E3EA513BE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BirthdayApp/GoogleSignInButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "GoogleSignInButton"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "FF3F60A7-3704-44CD-9A29-031E3EA513BE - d74dccf995376167"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BirthdayApp.GoogleSignInButton.colorScheme.getter : SwiftUI.ColorScheme"
+                  moduleName = "BirthdayApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bsp/Desktop/Class/Spring2022/Backend/project/BirthdayApp/BirthdayApp/GoogleSignInButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "FF3F60A7-3704-44CD-9A29-031E3EA513BE - 891db17a63b52264"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BirthdayApp.GoogleSignInButton.init() -&gt; BirthdayApp.GoogleSignInButton"
+                  moduleName = "BirthdayApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bsp/Desktop/Class/Spring2022/Backend/project/BirthdayApp/BirthdayApp/GoogleSignInButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
