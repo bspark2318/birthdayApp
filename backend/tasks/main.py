@@ -1,4 +1,3 @@
-# from email import header, headerregistry
 from xml.dom import UserDataHandler
 from flask import Flask, abort, json
 import requests

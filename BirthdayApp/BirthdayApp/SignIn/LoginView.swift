@@ -10,14 +10,14 @@ import GoogleSignInSwift
 
 struct LoginView: View {
 
-  // 1
+  
   @EnvironmentObject var viewModel: GoogleSignInModel
 
   var body: some View {
     VStack {
       Spacer()
 
-      // 2
+  
       Image("cake")
         .resizable()
         .aspectRatio(contentMode: .fit)

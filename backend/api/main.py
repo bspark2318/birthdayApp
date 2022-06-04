@@ -1,4 +1,4 @@
-import base64
+rm import base64
 from flask import Flask, Response, request, make_response, jsonify, json, abort
 from google.cloud import datastore
 from functools import wraps
@@ -38,6 +38,7 @@ def require_api_key(f):
     return decorated_function
 
 
+# Helper function for making updates to the query counts
 def update_query(query_type, userID): 
     datastore_client = datastore.Client.from_service_account_json('birthday-app-352106-2de15f68bece.json')    
     queries_query = datastore_client.query(kind="Analytics")    
@@ -78,8 +79,6 @@ def update_query(query_type, userID):
     return 
 
 
-
-
 @app.route("/api/add_birthday", methods=["POST"])
 @require_api_key
 def add_birthday():
@@ -95,7 +94,6 @@ def add_birthday():
     data = request.json
     
     datastore_client = datastore.Client.from_service_account_json("birthday-app-352106-2de15f68bece.json")
-    # # Kind for the new entity
     kind = "Birthday"
     
     try:
@@ -110,7 +108,7 @@ def add_birthday():
         entity["notificationEnabled"] = data['notificationEnabled']
         entity["notifications"] = data['notifications']
         datastore_client.put(entity)   
-        logging.debug("Book entity successfully put in datastore")
+        logging.debug("Birthday entity successfully put in datastore")
     except: 
         logging.error("Error while executing datastore request for birthday entity")
         return make_response("Error: Error while uploading birthday entity", 400)
@@ -123,7 +121,6 @@ def add_birthday():
         return make_response("Error: Error while uploading Analytics entity", 400)
         
     return make_response("Birthday Successfully uploaded", 201)
-
 
 
 @app.route("/api/get_birthdays")
@@ -149,13 +146,11 @@ def get_birthdays():
     query.add_filter("owner", "=", userID)
     try:
         birthday_entities = list(query.fetch())
-        # update_query("Get a book by ISBN", request.url, isbn=isbn)
         logging.debug("Datastore query for retrieving birthdays executed successfully")
     except:
         logging.error("Error while executing datastore query for retrieving birthdays")
         return make_response("Error: Error while fetching birthday entities", 400)
     
-    # print(return_array)
     return jsonify(birthday_entities), 200
 
 @app.route("/api/update_birthday", methods=["PUT"])
@@ -259,8 +254,6 @@ def create_user():
     data = request.json
     
     datastore_client = datastore.Client.from_service_account_json("birthday-app-352106-2de15f68bece.json")
-    # # Kind for the new entity
-    
     
     try:
         kind = "User"
@@ -283,8 +276,6 @@ def create_user():
         entity["api_create_birthday"] = 0
         entity["api_update_birthday"] = 0
         entity["api_delete_birthday"] = 0
-        
-        
         datastore_client.put(entity)   
         logging.debug("Analytics entity successfully put in datastore")
     except: 
@@ -308,14 +299,10 @@ def retrieve_user():
     """
     datastore_client = datastore.Client.from_service_account_json('birthday-app-352106-2de15f68bece.json')    
     userID =  request.headers.get('UserID')
-    
-    
-    
     query = datastore_client.query(kind="User")
     query.add_filter("userID", "=", userID)
     try:
         userEntity = list(query.fetch())
-        # update_query("Get a User by ISBN", request.url, isbn=isbn)
         logging.debug("Datastore query for retrieving a user executed successfully")
     except:
         logging.error("Error while executing datastore query for retrieving user data")
@@ -410,7 +397,6 @@ def upload_photo():
     
     user_entity = user_entity[0]
     
-    
     photo = data['photo'] 
     blob = None
     
@@ -419,8 +405,6 @@ def upload_photo():
         bucket_name = CLOUD_STORAGE_BUCKET
         bucket = storage_client.bucket(bucket_name)
 
-        # Setup blob
-        # blob = bucket.blob("Helloworld"+".png")
         blob = bucket.blob(str(uuid.uuid1()) +".png")
         base64_img_bytes = photo.encode('utf-8')
         decoded_image_data = base64.decodebytes(base64_img_bytes)
@@ -474,6 +458,7 @@ def health_check():
             
     return Response(status=200)
 
+# Helper function for checking the number of days between bdays
 def calculate_number_of_days(birthdate_str):
     birthdate_comp = birthdate_str[:10].split("-")
     month =int(birthdate_comp[1])
@@ -487,19 +472,18 @@ def calculate_number_of_days(birthdate_str):
     return (birthday - today).days
     
     
-    
-
 @app.route("/api/notify_birthdays")
 @require_api_key
 def notify_birthdays(): 
     """
-    Queries the datastore for all users and birthdays. Filters out the birthdays within the next 7 days, and organizes them into a list of notifications.Sent over to Tasks endpoint to send email notifications.
+    Queries the datastore for all users and birthdays. 
+    Filters out the birthdays within the next 7 days, 
+    and organizes them into a list of notifications.
+    Sent over to Tasks endpoint to send email notifications.
 
     Returns:
         Array of notifications
     """
-    
-    
     if request.headers.get('X-Appengine-Cron') == "true":
         logging.info("Email request coming from Cron")
     

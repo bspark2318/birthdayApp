@@ -9,7 +9,6 @@ import SwiftUI
 import GoogleSignIn
 
 struct CalendarBirthdayEditView: View {
-    //    @State var birthday: Birthday = Birthday(first_name: "Helloasdasdasasd", last_name: "World", month: 5, day: 10, importance: .Normal, notificationID: "15")
     
     @Binding var isPresented: Bool
     private let user = GIDSignIn.sharedInstance.currentUser
@@ -21,7 +20,6 @@ struct CalendarBirthdayEditView: View {
     @State var birthday: Date
     @State var month: Int
     @State var day: Int
-//    @State var importance: Importance
     @State var birthdayID: String
     @State var notificationEnabled: Bool
     @State var selections: [String]

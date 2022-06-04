@@ -49,7 +49,6 @@ struct ProfileView: View {
                     
                 }
                 
-                //                .zIndex(0)
                 
                 ZStack {
                     RoundedRectangle(cornerRadius: 30)
@@ -117,27 +116,7 @@ struct ProfileView: View {
                                        alignment: .leading)
                             Spacer()
                                 .frame(height:5)
-                            //                            if DataManager.sharedInstance.user.birthday != nil {
-                            //
-                            //                                let date = returnDate(date: DataManager.sharedInstance.user.birthday!)
-                            //
-                            //
-                            //                                Text("**Birthday: \(date)**")
-                            //                                    .font(.title3)
-                            //                                    .frame(maxWidth: .infinity, alignment: .leading)
-                            //                            } else {
-                            //
-                            //                                if Calendar.current.isDateInThisMonth(birthday)  {
-                            //                                    Text("**Birthday: Unknown**")
-                            //                                        .font(.title3)
-                            //                                        .frame(maxWidth: .infinity, alignment: .leading)
-                            //                                } else {
-                            //                                    let date = returnDate(date: birthday)
-                            //                                    Text("**Birthday: \(date)**")
-                            //                                        .font(.title3)
-                            //                                        .frame(maxWidth: .infinity, alignment: .leading)
-                            //                                }
-                            //                            }
+                
                             
                             
                             if Calendar.current.isDateInThisMonth(birthday) {

@@ -10,7 +10,6 @@
 		7F0751B42849F845002DC15E /* DataManagerUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0751B32849F845002DC15E /* DataManagerUser.swift */; };
 		7F0751B6284A0688002DC15E /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0751B5284A0688002DC15E /* ProfileEditView.swift */; };
 		7F0751B8284A396D002DC15E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0751B7284A396D002DC15E /* ImagePicker.swift */; };
-		7F0751BA284A3A5B002DC15E /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0751B9284A3A5B002DC15E /* ImagePickerView.swift */; };
 		7F2B95562836C957006FEC5B /* MajorStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B95552836C957006FEC5B /* MajorStructs.swift */; };
 		7F2B95582836D87A006FEC5B /* CaledarBirthdayEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B95572836D87A006FEC5B /* CaledarBirthdayEditView.swift */; };
 		7F5E80872846060800CA94D3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E80862846060800CA94D3 /* LoginView.swift */; };
@@ -44,7 +43,6 @@
 		7F0751B32849F845002DC15E /* DataManagerUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerUser.swift; sourceTree = "<group>"; };
 		7F0751B5284A0688002DC15E /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
 		7F0751B7284A396D002DC15E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		7F0751B9284A3A5B002DC15E /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		7F2B95552836C957006FEC5B /* MajorStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorStructs.swift; sourceTree = "<group>"; };
 		7F2B95572836D87A006FEC5B /* CaledarBirthdayEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaledarBirthdayEditView.swift; sourceTree = "<group>"; };
 		7F5E80862846060800CA94D3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -100,18 +98,8 @@
 		7F810D052830C1250034F0D5 = {
 			isa = PBXGroup;
 			children = (
-				7F0751B7284A396D002DC15E /* ImagePicker.swift */,
-				7F0751B9284A3A5B002DC15E /* ImagePickerView.swift */,
 				7F5E80942846087700CA94D3 /* GoogleService-Info.plist */,
-				7F2B95552836C957006FEC5B /* MajorStructs.swift */,
-				7F810D2F2830D73E0034F0D5 /* MonthStruct.swift */,
-				7F86D41428322BEC00D00507 /* CustomColor.swift */,
-				7F810D2B2830CCD10034F0D5 /* CalendarHelper.swift */,
-				7FF56179284803BB00C105DC /* DataManager.swift */,
 				7FB2E279284AF49400AD1280 /* LaunchScreen.storyboard */,
-				7F0751B32849F845002DC15E /* DataManagerUser.swift */,
-				7F810D272830CB7F0034F0D5 /* DateHolder.swift */,
-				7FF5617B284886AF00C105DC /* ResponseBodies.swift */,
 				7F810D102830C1250034F0D5 /* BirthdayApp */,
 				7F810D0F2830C1250034F0D5 /* Products */,
 			);
@@ -128,6 +116,8 @@
 		7F810D102830C1250034F0D5 /* BirthdayApp */ = {
 			isa = PBXGroup;
 			children = (
+				7FB2E27C284B1A7A00AD1280 /* Structs&Delegates */,
+				7FB2E27B284B1A4200AD1280 /* ImageHelpers */,
 				7F5E8096284608A900CA94D3 /* Info.plist */,
 				7F810D112830C1250034F0D5 /* BirthdayAppApp.swift */,
 				7F5E809B28460E9A00CA94D3 /* ContentView.swift */,
@@ -169,6 +159,29 @@
 				7F810D3128321AD20034F0D5 /* ProfileView.swift */,
 			);
 			path = TabViews;
+			sourceTree = "<group>";
+		};
+		7FB2E27B284B1A4200AD1280 /* ImageHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				7F0751B7284A396D002DC15E /* ImagePicker.swift */,
+			);
+			path = ImageHelpers;
+			sourceTree = "<group>";
+		};
+		7FB2E27C284B1A7A00AD1280 /* Structs&Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				7F2B95552836C957006FEC5B /* MajorStructs.swift */,
+				7F810D2F2830D73E0034F0D5 /* MonthStruct.swift */,
+				7F86D41428322BEC00D00507 /* CustomColor.swift */,
+				7F810D2B2830CCD10034F0D5 /* CalendarHelper.swift */,
+				7FF56179284803BB00C105DC /* DataManager.swift */,
+				7F0751B32849F845002DC15E /* DataManagerUser.swift */,
+				7F810D272830CB7F0034F0D5 /* DateHolder.swift */,
+				7FF5617B284886AF00C105DC /* ResponseBodies.swift */,
+			);
+			path = "Structs&Delegates";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +269,6 @@
 				7F810D202830C24E0034F0D5 /* MainTabView.swift in Sources */,
 				7F0751B42849F845002DC15E /* DataManagerUser.swift in Sources */,
 				7F2B95582836D87A006FEC5B /* CaledarBirthdayEditView.swift in Sources */,
-				7F0751BA284A3A5B002DC15E /* ImagePickerView.swift in Sources */,
 				7F86D41528322BEC00D00507 /* CustomColor.swift in Sources */,
 				7F810D3228321AD20034F0D5 /* ProfileView.swift in Sources */,
 				7F0751B6284A0688002DC15E /* ProfileEditView.swift in Sources */,
