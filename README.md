@@ -21,7 +21,7 @@ deleting birthday has never been easier!
 ### App Screenshots
 
 <img src="https://github.com/bspark2318/birthdayApp/blob/main/Screenshot/sample.png" 
-     alt="Sample Application Look#1" width="480" height="240">
+     alt="Sample Application Look#1" width="640" height="360">
 
 ## Moving Forward
 
