@@ -20,12 +20,8 @@ deleting birthday has never been easier!
 
 ### App Screenshots
 
-<img src="https://github.com/bspark2318/good-taste-ios/blob/main/screen-shots/PlaceDetailSS.png" 
-     alt="Sample Application Look#1" width="144" height="240">
-<img src="https://github.com/bspark2318/good-taste-ios/blob/main/screen-shots/AccountDetailSS.png" 
-     alt="Sample Application Look#2" width="144" height="240">
-<img src="https://github.com/bspark2318/good-taste-ios/blob/main/screen-shots/PlaceFocusSS.png" 
-     alt="Sample Application Look#3" width="144" height="240">
+<img src="https://github.com/bspark2318/birthdayApp/blob/main/Screenshot/sample.png" 
+     alt="Sample Application Look#1" width="480" height="240">
 
 ## Moving Forward
 
