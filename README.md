@@ -19,13 +19,18 @@ deleting birthday has never been easier!
 
 ### Specification 
 - Front-end developed with SwiftUI
-- Back-end developed with Flask, and deployed on to Google Cloud Platform 
-- Back-end broken up into API, analytics, and cron tasks.
+- Back-end developed with Flask, subdivided into Analytics, Tasks, and API
+- Back-end deployed on to cloud with Google Cloud Platform (App Engine)
+- Used GCP datastore and storage to store user information and pictures / thumbnails
+- Cloud functions scheduled with with Cloud Scheduler to automate sending out emails (using mailgun)
+- GCP service has been halted since July 2022. 
+
 
 ### Things you could do 
-- Change Profile picture and description 
-- Add important birthdays, and receive notifications via email (mailgun)
-- See a quickview of the calendar 
+- Change User Profile (short description to your profile picture) 
+- Add important birthdays and sort them by importance and reminder interval
+- Receive notifications of upcoming birthdays via email (mailgun)
+- See a quickview of the calendar for easy contextualization
 
 
 ### App Sample Look
